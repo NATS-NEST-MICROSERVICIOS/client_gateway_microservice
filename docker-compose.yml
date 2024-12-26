@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nats-main:
+    image: nats
+    container_name: nats-main
+    ports:
+      - "4222:4222" # Puerto cliente
+      - "6222:6222" # Puerto de cluster
+      - "8222:8222" # Puerto de monitoreo
+    restart: always
